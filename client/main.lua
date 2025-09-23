@@ -1,14 +1,13 @@
 local clientConfig = require 'config.client'
 
+local playerJob = lib.callback.await('lv_markers:server:getPlayerJob', false)
+
+function onJobUpdate(job)
+    playerJob = job
+end
+
 for i=1, #clientConfig.locations do
     local locations = clientConfig.locations[i]
-
-    local playerJob = lib.callback.await('lv_markers:server:getPlayerJob', false)
-    if locations.job ~= nil then
-        if playerJob ~= locations.job then 
-            return
-        end
-    end
     
     local marker = lib.marker.new({
         type = locations.type,
@@ -26,8 +25,10 @@ for i=1, #clientConfig.locations do
     })
 
     function point:nearby()
-        if self.currentDistance <= locations.distance then
+        if self.currentDistance <= locations.distance and (not locations.job or locations.job == playerJob.name) then
             marker:draw()
         end
     end
 end
+
+
