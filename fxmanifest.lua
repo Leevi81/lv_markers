@@ -14,7 +14,8 @@ server_scripts {
 }
 
 shared_scripts {
-    '@ox_lib/init.lua'
+    '@ox_lib/init.lua',
+    'shared/*.lua'
 }
 
 files {
