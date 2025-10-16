@@ -18,8 +18,6 @@ A lightweight and optimized marker system for FiveM, offering flexible configura
 5. Configure the the markers to your liking
 
 # Links
-- [Preview](https://streamable.com/eghu0q)
-- [Cfx.re Post](https://forum.cfx.re/t/free-lv-trash-searching/5356617/2)
 - [Discord](https://dsc.gg/lvscripts)
 
 # Support
