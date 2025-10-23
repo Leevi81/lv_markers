@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Leevi81'
 description 'An optimized marker script for FiveM'
-version '1.0.0'
+version '1.1.1'
 
 client_scripts {
     'client/*.lua'
@@ -21,4 +21,5 @@ shared_scripts {
 files {
     'config/*.lua',
     'bridge/**/*.lua'
+
 }
